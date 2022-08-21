@@ -1,0 +1,17 @@
+#flowers-image{
+
+}
+#container{
+    position: absolute;
+    width: 450px;
+}
+#transparent-title{
+    background-color: rgba(65, 0, 126, 0.4);
+    margin:0%;
+    padding:15px;
+}
+#title{
+    background-color: rgb(65, 0, 126);
+    margin:0%;
+    padding:15px;
+}

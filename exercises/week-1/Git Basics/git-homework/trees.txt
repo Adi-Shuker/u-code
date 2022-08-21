@@ -1,0 +1,7 @@
+oak,
+pine,
+Portia tree,
+Black catechu,
+Purple orchid tree,
+golden apple,
+Baobab

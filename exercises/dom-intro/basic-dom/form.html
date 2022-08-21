@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="form">
+        <h3>Name:</h3>
+        <input type="text" id="name" name="name"><br><br>
+        <div class="row">
+            <div class="column">
+                <h3>Desired Salary:</h3>
+                <input type="text" id="desired-salary" name="desired-salary"><br><br>
+            </div>
+            <div class="column">
+                <h3>Birthday:</h3>
+                <input type="text" id="birthday" name="birthday"><br><br>
+            </div>
+        </div>
+        <h3>Phone:</h3>
+        <input type="text" id="phone" name="phone"><br><br>
+        <div class="row">
+            <div class="column">
+                <div id="errors"></div>
+            </div>
+            <div class="column">
+                <button onclick="validate()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>

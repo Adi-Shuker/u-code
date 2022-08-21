@@ -1,0 +1,17 @@
+#div1 {
+    width: calc(100% - 20px);
+    background-color: yellow;
+    height: 30px;
+}
+
+#div2 {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    background-color: green;
+    height: 30px;
+}
+* {
+    margin: 0;
+    padding: 0;
+  }

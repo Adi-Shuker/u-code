@@ -1,0 +1,29 @@
+#container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 
+  "h h s s m m""h h s s m m""h h . . m m""h h f f m m""h h f f m m";
+  /* "h h h h h h""s s m m m m""s s m m m m""s s m m m m""s s f f f f";  basic tamplate */
+  grid-gap: 10px;
+}
+.head{
+  grid-area: h;
+  background-color: aqua;
+}
+
+.side-nav{
+  grid-area: s;
+  background-color: aquamarine;
+}
+
+.main{
+  grid-area: m;
+  background-color: blueviolet;
+}
+
+.foot{
+  grid-area: f;
+  background-color: black;
+}

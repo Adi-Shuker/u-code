@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+}
+#chat{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 15fr 1fr;
+    grid-template-areas: 
+    "f c"
+    "f i";
+}
+
+#friends{
+    grid-area: f;
+    display: grid;
+    background-color: rgb(116, 21, 163);
+}
+
+#chatbox{
+    grid-area: c;
+    display: grid;
+}
+
+#input-send{
+    grid-area: i;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: 
+    "text send-button";
+}
+input{
+    grid-area: text; 
+}
+.send-button{
+    color:white;
+    background-color: rgb(116, 21, 163);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.name{
+    background-color: rgb(179, 131, 179);
+    padding: 10px;
+    margin: 10px;
+}
+.title{
+    margin-top:20px;
+    margin-left:10px
+}
+.right{
+    grid-area:r;
+    justify-self: end;
+}
+.aliceblue-massage{
+    background-color: aliceblue;
+    padding: 10px;
+}
+.green-massage{
+    background-color: greenyellow;
+    padding: 10px;
+}
+.left{
+    grid-area:l;
+}
+.text-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    "l . . r"
+}
+
+ 

@@ -1,0 +1,16 @@
+ .row{
+    width: 40%;
+ }
+ .row:after{
+    display: table-column;
+}
+.column{
+    float: left;
+    width: 32%;
+    height: 20px;
+    border-style: solid;
+    border-color: red;
+    background-color: pink;
+
+}
+
