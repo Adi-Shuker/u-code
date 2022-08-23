@@ -1,9 +1,3 @@
-//The module that manages our posts logic
-//Storing all our twits (not the same as tweets)
-// Posting a twit
-// Commenting on twits
-// Removing twits
-// Removing comments
 const Tweeter = function () {
     let _posts = [
         {
@@ -79,6 +73,7 @@ const Tweeter = function () {
             post.comments.splice(commentToRemoveIndex, 1);
         }
     };
+
     return {
         getPosts,
         addPost,
@@ -87,8 +82,3 @@ const Tweeter = function () {
         removeComment,
     };
 };
-
-// const tweeter = Tweeter();
-
-// tweeter.addPost("This is my own post!");
-// tweeter.addPost("This is my own post2!");

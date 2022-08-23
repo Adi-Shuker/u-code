@@ -1,0 +1,30 @@
+.container{
+    height: 200px;
+    width: 300px;
+    position: relative;
+}
+.gray{
+    background-color: gray;
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    top:0;
+}
+.red{
+    background-color: red;
+    height: 150px;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+}
+.white{
+    background-color: white;
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left:15%;
+    right: 15%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+}

@@ -1,0 +1,52 @@
+.container{
+    background-color: blueviolet;
+    height: 200px;
+    width: 300px;
+    position: relative;
+}
+.columns-container{
+    position: absolute;
+    bottom: 0;
+    border: 1px solid;
+    height: 170px;
+    width: 240px;
+}
+.bottom-right{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    margin: 0;
+    padding-right:5px ;
+}
+.column{
+    position: absolute;
+    background-color: gray;
+    width: 20px;
+    bottom:0;
+}
+.one{
+    height: 10%;
+    left:2%;
+
+}
+.two{
+    height: 60%;
+    left:20%;
+    
+}
+.tree{
+    height: 80%;
+    left:38%;
+}
+.four{
+    height: 70%;
+    left:55%;
+}
+.five{
+    height: 65%;
+    left:70%;
+}
+.six{
+    height: 40%;
+    left:85%;
+}
