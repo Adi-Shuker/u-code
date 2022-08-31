@@ -1,0 +1,8 @@
+.card{
+    background-color: gray;
+    padding:10px;
+    display:inline-block;
+}
+.card:hover {
+    background-color: lightgray;
+  }

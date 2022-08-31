@@ -16,6 +16,7 @@ body{
 #header{
     grid-area: h;
     color: #3498db;
+    font-size: 4.5vw;
 }
 
 #input{
@@ -41,10 +42,12 @@ body{
 }
 
 .post{
+    position: relative;
     box-shadow: 1px 1px 3px;
     margin: 10px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
+    font-size: 2.5vw;
 }
 
 #post:active{
@@ -60,12 +63,14 @@ body{
     margin: 10px;
 }
 
-.delete{
+.delete-post{
     cursor: pointer;
     color: #ecf0f1;
     background-color: #e74c3c;
-    display: inline-block;
+    position: absolute;
+    right:0;
     padding: 5px;
+    margin-right: 10px;
     border-radius: 3px;
     font-size: 0.8em;
 }
@@ -73,9 +78,11 @@ body{
 .delete-comment{
     cursor: pointer;
     color: #e74c3c;
+    padding: 10px;
 }
 
 .add-comment-button{
+    grid-area: cb;
     display:absolute;
     background-color: #3498db;
     border: 1px solid #2980b9;
@@ -86,10 +93,24 @@ body{
     font-size: 2.5vw;
     height: 100%;
 }
-#comment{
+.comment{
     width: 50%;
     padding: 10px;
     font-size: 1.5vw;
+}
+#comment{
+    grid-area: c;
+    padding: 10px;
+    font-size: 1.5vw;
+}
+.add-comment-container{
+    display: grid;
+    grid-gap: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-columns: 3fr 1fr 2fr ;
+    grid-template-areas: 
+    "c cb ."
 }
 
 

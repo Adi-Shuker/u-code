@@ -34,3 +34,7 @@ moveDown.onclick = function () {
             "px";
     }
 };
+// לשלוף כמה אלמנטים מאותו סוג פעם אחת ולמנוע קריאות מרבות מהדום
+//     ball < 40 ? command : null;
+// 
+

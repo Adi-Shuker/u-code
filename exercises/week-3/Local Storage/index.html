@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input></input>
+
+    <script id="menu-template-with-if" type="text/x-handlebars-template">
+            <ul>
+              {{#each wisdom}}
+              
+                <li data-id="{{id}}"><span class="remove-wisdom">X </span>{{text}}</li>
+              {{/each}}
+            </ul>
+          </script>
+    <div class="inputs"></div>
+    <h1>wisdom</h1>
+    <div class="wisdom">
+
+    </div>
+    <button class="add-input">click</button>
+    <button class="clear-wisdom">remove-wisdom</button>
+    <script src="main.js"></script>
+</body>
+
+</html>

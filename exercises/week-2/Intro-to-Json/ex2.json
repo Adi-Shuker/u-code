@@ -1,0 +1,6 @@
+{
+    "healthy": "true",
+    "calories": "250",
+    "directions": ["Cut potatoes into half inch thick slices”"],
+    "ingredients": [{ "name": "garlic powder", "count": 2 }]
+}

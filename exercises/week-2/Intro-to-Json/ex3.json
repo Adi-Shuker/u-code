@@ -1,0 +1,40 @@
+{
+    "animals": {
+        "cow": {
+            "name": "A",
+            "weight": "300",
+            "unit": "kilograms",
+            "location": "",
+            "endangered": "",
+            "foods": [],
+            "delicious": 3
+        },
+        "elephent": {
+            "name": "A",
+            "weight": "300",
+            "unit": "kilograms",
+            "location": "",
+            "endangered": "",
+            "foods": [],
+            "delicious": 3
+        },
+        "gray-wolf": {
+            "name": "A",
+            "weight": "300",
+            "unit": "kilograms",
+            "location": "",
+            "endangered": "",
+            "foods": [],
+            "delicious": 3
+        },
+        "squirrel": {
+            "name": "A",
+            "weight": "300",
+            "unit": "kilograms",
+            "location": "",
+            "endangered": "",
+            "foods": [],
+            "delicious": 3
+        }
+    }
+}
