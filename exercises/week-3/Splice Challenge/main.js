@@ -1,23 +1,65 @@
-//start, deleteCount, item1, item2, itemN
-const splice = function (arr) {
-    const args = [...arguments];
-    const start = args[1];
-    let deleteCount = args[2] || arr.length;
-    const items = args.slice(3, args.length);
-    temp = arr.filter((item, index) => {
-        deleteCount--;
-        return index >= start && deleteCount;
-    });
-    for (let index = 0; index < temp.length; index++) {
-        arr[index] = temp[index];
+//copy dest to source
+const copy = (source, dest) => {
+    for (let index = 0; index < dest.length; index++) {
+        source[index] = dest[index];
     }
-    arr.length = temp.length;
-    return;
+    source.length = dest.length;
 };
+
+Array.prototype.splice = function () {
+    const args = [...arguments];
+    const start = args[0];
+    let deleteCount = args[1] ?? this.length;
+    const items = args.slice(2, args.length);
+    const deleteItems = [];
+    const arrAfterDelete = this.filter((item, index) => {
+        const shouldRemove = index >= start && deleteCount;
+        if (shouldRemove) {
+            deleteItems.push(item);
+            deleteCount--;
+        }
+        return !shouldRemove;
+    });
+    copy(this, arrAfterDelete);
+    const arrWithItems = [
+        ...this.slice(0, start),
+        ...items,
+        ...this.slice(start, this.length),
+    ];
+    copy(this, arrWithItems);
+    return deleteItems;
+};
+// remove 1 element
 let arr = [1, 2, 3];
-splice(arr, 0, 1);
+arr.splice(0, 1);
 console.log(arr); //should be [2,3]
+
 // add 1 element
 arr = [1, 2, 3];
-splice(arr, 0, 0, 0);
+arr.splice(0, 0, 0);
 console.log(arr); //should be [0,1,2,3]
+
+// replace 1 element
+arr = [1, 2, 3];
+arr.splice(1, 1, 55);
+console.log(arr); //should be [1,55,3]
+
+// delete all elements from index to end
+arr = [1, 2, 3, 4, 5];
+arr.splice(1);
+console.log(arr); //should be [1]
+
+// returns array of deleted elements
+arr = [1, 2, 3];
+let deleted = arr.splice(1);
+console.log(deleted); //should be [2,3]
+
+// returns an array of the deleted element (1 element)
+arr = [1, 2, 3];
+deleted = arr.splice(1, 1);
+console.log(deleted); //should be [2]
+
+// returns an empty array when no elements are deleted
+arr = [1, 2, 3];
+deleted = arr.splice(1, 0, 5);
+console.log(deleted); //should be []
