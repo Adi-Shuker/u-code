@@ -7,10 +7,8 @@ const copy = (source, dest) => {
 };
 
 Array.prototype.splice = function () {
-    const args = [...arguments];
-    const start = args[0];
-    let deleteCount = args[1] ?? this.length;
-    const items = args.slice(2, args.length);
+    let [start, deleteCount, ...items] = [...arguments];
+    deleteCount = deleteCount ?? this.length - start;
     const deleteItems = [];
     const arrAfterDelete = this.filter((item, index) => {
         const shouldRemove = index >= start && deleteCount;
@@ -20,11 +18,10 @@ Array.prototype.splice = function () {
         }
         return !shouldRemove;
     });
-    copy(this, arrAfterDelete);
     const arrWithItems = [
-        ...this.slice(0, start),
+        ...arrAfterDelete.slice(0, start),
         ...items,
-        ...this.slice(start, this.length),
+        ...arrAfterDelete.slice(start, arrAfterDelete.length),
     ];
     copy(this, arrWithItems);
     return deleteItems;
