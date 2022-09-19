@@ -1,0 +1,5 @@
+Quiz 1: 80
+Quiz 2: 85
+Quiz 3: 82
+----
+Average: 85.0

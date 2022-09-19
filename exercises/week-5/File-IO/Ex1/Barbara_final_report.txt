@@ -1,0 +1,5 @@
+Quiz 1: 78
+Quiz 2: 68
+Quiz 3: 78
+----
+Average: 68.0

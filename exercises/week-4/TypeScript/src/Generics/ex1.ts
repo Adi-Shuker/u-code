@@ -49,4 +49,3 @@ console.log(genericSum(44));
 console.log(genericSum(["test", 22, 55, "block", "9"]));
 console.log(genericSum([23, 433, 11]));
 
-//ex2
