@@ -105,7 +105,8 @@ add2(1, 2, age=3, text="hello")
 def cache_decorator(func):
     memory = {}
 
-    def inner(n):
+    def inner(*args):
+        n = args[0]
         nonlocal memory
         if n in memory.keys():
             return memory[n]
